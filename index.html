@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Ucapan Spesial Untukmu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bgMusic" preload="auto">
+    <source src="audio/happy-birthday-instrumental.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <div class="card">
+        <h1>🎉 Ucapan Spesial 🎉</h1>
+
+        <div class="form">
+            <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" placeholder="Masukkan nama lengkap">
+            </div>
+
+            <div class="form-group">
+                <label for="birthdate">Tanggal Lahir</label>
+                <input type="date" id="birthdate">
+            </div>
+            <button onclick="generateMessage()">Lihat Ucapan</button>
+        </div>
+
+        <div id="result" class="result hidden"></div>
+    </div>
+</div>
+
+<!-- Balon -->
+<div class="balloon balloon1"></div>
+<div class="balloon balloon2"></div>
+<div class="balloon balloon3"></div>
+
+<!-- Ornamen kado -->
+<div class="gift">🎁</div>
+
+<script src="script.js"></script>
+</body>
+</html>
