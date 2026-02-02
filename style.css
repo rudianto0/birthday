@@ -1,115 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #fdeff9, #ec38bc);
-    overflow: hidden;
+  overflow: hidden;
+  background: linear-gradient(180deg, #ffdee9, #b5fffc);
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* SLIDER */
+.slider {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  transition: transform 0.6s ease;
 }
 
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    width: 360px;
-    text-align: center;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-    z-index: 2;
+.slide {
+  min-width: 100vw;
+  height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #444;
 }
 
-.card h1 {
-    margin-bottom: 20px;
-    color: #ec38bc;
+h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
 }
 
-.form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+p {
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
-.form button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    background: #ec38bc;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+.emoji {
+  font-size: 3rem;
+  margin-bottom: 16px;
 }
 
-.form {
-    text-align: left;
+/* BUTTON */
+.btn {
+  position: fixed;
+  bottom: env(safe-area-inset-bottom, 24px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 14px 32px;
+  background: #ff6f91;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 9999;
 }
 
-.form-group {
-    margin-bottom: 16px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 14px;
-    color: #444;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-}
-
-
-.result {
-    margin-top: 20px;
-    color: #333;
-}
-
-.hidden {
-    display: none;
-}
-
-/* Balon */
+/* BALLOONS */
 .balloon {
-    position: absolute;
-    bottom: -100px;
-    width: 60px;
-    height: 80px;
-    background: radial-gradient(circle at 30% 30%, #fff, #ff5fa2);
-    border-radius: 50%;
-    animation: floatUp 12s linear infinite;
-    opacity: 0.7;
+  position: absolute;
+  bottom: -100px;
+  font-size: 2rem;
+  animation: floatUp 8s linear infinite;
 }
-
-.balloon1 { left: 15%; animation-duration: 14s; }
-.balloon2 { left: 45%; animation-duration: 12s; }
-.balloon3 { left: 75%; animation-duration: 16s; }
 
 @keyframes floatUp {
-    from { transform: translateY(0); }
-    to { transform: translateY(-120vh); }
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
 }
 
-/* Kado */
+/* DECORATION */
+.decor {
+  position: absolute;
+  bottom: 60px;
+  font-size: 3rem;
+}
+
+.cake {
+  left: 20px;
+}
+
 .gift {
-    position: absolute;
-    bottom: 20px;
-    right: 30px;
-    font-size: 48px;
-    animation: bounce 2s infinite;
+  right: 20px;
 }
 
-@keyframes bounce {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+/* MOBILE */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }

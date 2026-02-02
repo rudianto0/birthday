@@ -1,45 +1,80 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Ucapan Spesial Untukmu</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy 21st Birthday 🎉</title>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<audio id="bgMusic" preload="auto">
-    <source src="audio/happy-birthday-instrumental.mp3" type="audio/mpeg">
-</audio>
+  <!-- BALLOONS -->
+  <div class="balloon" style="left:10%">🎈</div>
+  <div class="balloon" style="left:30%; animation-delay:2s">🎈</div>
+  <div class="balloon" style="left:50%; animation-delay:4s">🎈</div>
+  <div class="balloon" style="left:70%; animation-delay:1s">🎈</div>
+  <div class="balloon" style="left:90%; animation-delay:3s">🎈</div>
 
-<div class="container">
-    <div class="card">
-        <h1>🎉 Ucapan Spesial 🎉</h1>
+  <!-- DECOR -->
+  <div class="decor cake">🎂</div>
+  <div class="decor gift">🎁</div>
 
-        <div class="form">
-            <div class="form-group">
-                <label for="name">Nama Lengkap</label>
-                <input type="text" id="name" placeholder="Masukkan nama lengkap">
-            </div>
+  <!-- SLIDER -->
+  <div class="slider" id="slider">
 
-            <div class="form-group">
-                <label for="birthdate">Tanggal Lahir</label>
-                <input type="date" id="birthdate">
-            </div>
-            <button onclick="generateMessage()">Lihat Ucapan</button>
-        </div>
-
-        <div id="result" class="result hidden"></div>
+    <div class="slide">
+      <div class="emoji">🎉</div>
+      <h1>Selamat Ulang Tahun ke-21</h1>
+      <p>
+        Hari ini adalah hari spesialmu ✨  
+        Hari di mana dunia diberi hadiah berupa dirimu.
+      </p>
     </div>
-</div>
 
-<!-- Balon -->
-<div class="balloon balloon1"></div>
-<div class="balloon balloon2"></div>
-<div class="balloon balloon3"></div>
+    <div class="slide">
+      <div class="emoji">🌸</div>
+      <h1>21 Tahun yang Indah</h1>
+      <p>
+        Di usia 21 ini, semoga kamu semakin kuat,  
+        semakin bijaksana, dan selalu menjadi versi terbaik dari dirimu sendiri.
+      </p>
+    </div>
 
-<!-- Ornamen kado -->
-<div class="gift">🎁</div>
+    <div class="slide">
+      <div class="emoji">🤍</div>
+      <h1>Doa yang Tulus</h1>
+      <p>
+        Semoga Allah selalu menjaga langkahmu,  
+        melapangkan rezekimu, menenangkan hatimu,  
+        dan mengabulkan setiap doa baik yang kamu panjatkan.
+      </p>
+    </div>
 
-<script src="script.js"></script>
+    <div class="slide">
+      <div class="emoji">✨</div>
+      <h1>Masa Depanmu</h1>
+      <p>
+        Semoga setiap impianmu menemukan jalannya,  
+        setiap lelahmu terbayar bahagia,  
+        dan setiap harimu dipenuhi cinta serta senyuman.
+      </p>
+    </div>
+
+    <div class="slide">
+      <div class="emoji">💖</div>
+      <h1>Untuk Kamu</h1>
+      <p>
+        Teruslah bersinar dengan caramu sendiri.  
+        Kamu berharga. Kamu dicintai.  
+        Selamat ulang tahun 🤍
+      </p>
+    </div>
+
+  </div>
+
+<button class="btn" onclick="nextSlide()">Lanjutkan 💖</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
